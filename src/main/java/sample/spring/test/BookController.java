@@ -12,6 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class BookController {
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public ModelAndView main() {
+		return new ModelAndView("book/index");
+	}
+	
 	@Autowired // 서비스 호출하기 위해 BookService를 의존성 주입 (BookService 인터페이스가 사용되었음)
 	BookService bookService; // 책 입력기능 컨트롤러 서비스 빈 추가
 	

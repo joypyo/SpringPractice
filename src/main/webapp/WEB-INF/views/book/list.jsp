@@ -8,36 +8,39 @@
 <meta charset="UTF-8">
 <title>책 목록</title>
 </head>
+<link rel= "stylesheet" href="resources/css/common.css" />
 <body>
-<h1>책 목록</h1>
-<p>
-	<form>
-		<input type="text" placeholder="검색" name="keyword" value="${keyword }" />
-		<input type="submit" value="검색" />
-	</form>
-</p>
+<%@ include file="main_top.jsp"  %>
+<div class="content">
+	<div class="title">
+		<h2>책 목록</h2>
+	</div>
 <table>
 	<thead>
 		<tr>
-			<td>제목</td>
-			<td>카테고리</td>
-			<td>가격</td>
+			<th>제목</th>
+			<th>카테고리</th>
+			<th>가격</th>
 		</tr>
 	</thead>
 	<tbody>
 		<c:forEach var="row" items="${data }" >
 		<tr>
 			<td>
-				<a href="detail?bookId=${row.book_id }">${row.title }</a>
+				<a style="color:black;" href="detail?bookId=${row.book_id }">${row.title }</a>
 			</td>
 			<td>${row.category }</td>
-			<td><fmt:formatNumber type="number" maxFractionDigits="3" value="${row.price }" /></td>
+			<td><fmt:formatNumber type="number" maxFractionDigits="3" value="${row.price }" />&nbsp;원</td>
 		</tr>
 		</c:forEach>
 	</tbody>
 </table>
 <p>
-	<a href="/create">생성</a>
+	<form>
+		<input type="text" placeholder="검색" size = "40" name="keyword" value="${keyword }" />
+		<input type="submit" value="검색" />
+	</form> <a href="/create">생성</a>
 </p>
+</div>
 </body>
 </html>

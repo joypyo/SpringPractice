@@ -5,25 +5,43 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>책 상세</title>
+<title>도서 상세 보기</title>
 </head>
+<link rel="stylesheet" href="resource/css/common.css" />
 <body>
+<%@ include file="main_top.jsp" %>
 <fmt:requestEncoding value="UTF-8"/>
-<h1>책 상세</h1>
-<p>제목 :${data.title }</p>
-<p>카테고리 : ${data.category }</p>
-<p>가격 : <fmt:formatNumber type="number" maxFractionDigits="3" value="${data.price }" /></p>
-<p>입력일 : <fmt:formatDate  value="${data.insert_date }" pattern="yyyy.MM.dd HH:mm:ss" /></p>
-
-<p>
-	<a href="update?bookId=${bookId }">수정</a>
-</p>
-<form method="post" action="delete">
+<div class="content">
+	<div class="title">
+		<h2>도서 상세 보기</h2>
+	</div>
+	<table>
+	<tr>
+		<th>제목</th>
+		<td>${data.title }</td>
+	</tr>
+	<tr>
+		<th>카테고리</th>
+		<td>${data.category }</td>
+	</tr>
+	<tr>
+		<th>가격</th>
+		<td> <fmt:formatNumber type="number" maxFractionDigits="3" value="${data.price }" />원</td>
+	</tr>
+	<tr>
+		<th>등록일</th>
+		<td><fmt:formatDate  value="${data.insert_date }" pattern="yyyy.MM.dd HH:mm:ss" /></td>
+	</tr>
+	</table>
+	<div class="btn">
+	<button onclick="location.href='update?bookId=${bookId }'">수정</button>
+	<button onclick="location.href='list'">목록</button>
+	<form action="delete" method="post">
+	<button type="submit" >삭제</button>
 	<input type="hidden" name="bookId" value="${bookId }" />
-	<input type="submit" value="삭제" />
-</form>
-<p>
-	<a href="list">목록으로</a>
-</p>
+	</form>
+
+</div>
+</div>
 </body>
 </html>
