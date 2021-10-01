@@ -35,12 +35,12 @@
 		</c:forEach>
 	</tbody>
 </table>
-<p>
+
 	<form>
-		<input type="text" placeholder="검색" size = "40" name="keyword" value="${keyword }" />
-		<input type="submit" value="검색" />
-	</form> <a href="/create">생성</a>
-</p>
+		<input type="text" placeholder="도서명 입력" size = "40" name="keyword" value="${keyword }" />
+		<button type="submit">도서검색</button>
+		<button type=button onclick="location.href='/create'">도서등록</button>
+	</form> 
 </div>
 </body>
 </html>
