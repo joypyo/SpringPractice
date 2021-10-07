@@ -8,7 +8,7 @@
 </head>
 <link rel= "stylesheet" href="resources/css/common.css" />
 <body>
-<%@ include file="main_top.jsp"%>
+<%@ include file="../main_top.jsp"%>
 	<div class="content">
 		<div class="title">
 			<h1>도서 수정</h1>

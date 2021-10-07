@@ -10,7 +10,7 @@
 </head>
 <link rel= "stylesheet" href="resources/css/common.css" />
 <body>
-<%@ include file="main_top.jsp"  %>
+<%@ include file="../main_top.jsp"  %>
 <div class="content">
 	<div class="title">
 		<h2>책 목록</h2>

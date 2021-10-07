@@ -9,7 +9,7 @@
 </head>
 <link rel="stylesheet" href="resource/css/common.css" />
 <body>
-<%@ include file="main_top.jsp" %>
+<%@ include file="../main_top.jsp" %>
 <fmt:requestEncoding value="UTF-8"/>
 <div class="content">
 	<div class="title">

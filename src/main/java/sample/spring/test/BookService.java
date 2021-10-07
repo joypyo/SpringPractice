@@ -2,7 +2,10 @@ package sample.spring.test;
 
 import java.util.List;
 import java.util.Map;
+import org.springframework.stereotype.Service;
 
+
+@Service("bookService")
 public interface BookService {
 
 	String create(Map<String, Object> map); //책 입력 기능 인터페이스 메소드 시그니쳐 생성

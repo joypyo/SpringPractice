@@ -8,9 +8,9 @@
 </head>
 <link rel="stylesheet" href="resources/css/common.css" />
 <body>
-	<%@ include file="main_top.jsp"  %>
+	<%@ include file="../main_top.jsp"  %>
 	<div class="content">
-		<img src="resources/img/books.jpg">
+		<img src="resources/img/books.jpg" height="600px">
 	</div>
 </body>
 </html>

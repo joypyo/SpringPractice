@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class BookServiceImpl implements BookService {
 	@Autowired
 	BookDao bookDao;
-	
+		
 	@Override
 	public String create(Map<String, Object>map) { //책 입력 기능 서비스 클래스 메소드
 		int affectRowCount = this.bookDao.insert(map);
